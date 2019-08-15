@@ -6,12 +6,56 @@ package com.opw;
 
 public class listOfDevices implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public listOfDevices() {
-    }
+	private java.lang.String mobile;
+	private java.lang.String broadband;
 
+	private java.lang.String services;
 
+	private java.lang.String tablet;
 
+	public listOfDevices() {
+	}
+
+	public java.lang.String getMobile() {
+		return this.mobile;
+	}
+
+	public void setMobile(java.lang.String mobile) {
+		this.mobile = mobile;
+	}
+
+	public java.lang.String getBroadband() {
+		return this.broadband;
+	}
+
+	public void setBroadband(java.lang.String broadband) {
+		this.broadband = broadband;
+	}
+
+	public java.lang.String getServices() {
+		return this.services;
+	}
+
+	public void setServices(java.lang.String services) {
+		this.services = services;
+	}
+
+	public java.lang.String getTablet() {
+		return this.tablet;
+	}
+
+	public void setTablet(java.lang.String tablet) {
+		this.tablet = tablet;
+	}
+
+	public listOfDevices(java.lang.String mobile, java.lang.String broadband,
+			java.lang.String services, java.lang.String tablet) {
+		this.mobile = mobile;
+		this.broadband = broadband;
+		this.services = services;
+		this.tablet = tablet;
+	}
 
 }
