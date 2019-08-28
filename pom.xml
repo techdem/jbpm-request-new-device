@@ -1,21 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.opw</groupId>
   <artifactId>request-new-device-kjar</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>kjar</packaging>
   <name>request-new-device-kjar</name>
-
   <properties>
     <version.org.kie>7.25.0.Final</version.org.kie>
-    <maven.compiler.target>1.8</maven.compiler.target>
-    <maven.compiler.source>1.8</maven.compiler.source>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
   </properties>
-
+  <repositories>
+    <repository>
+      <id>jboss-public-repository-group</id>
+      <name>JBoss Public Repository Group</name>
+      <url>https://repository.jboss.org/nexus/content/groups/public/</url>
+    </repository>
+  </repositories>
   <build>
     <plugins>
       <plugin>
@@ -26,7 +30,6 @@
       </plugin>
     </plugins>
   </build>
-
   <profiles>
     <profile>
       <id>docker</id>
@@ -36,7 +39,7 @@
         </property>
       </activation>
       <build>
-        <plugins> 
+        <plugins>
           <plugin>
             <artifactId>maven-assembly-plugin</artifactId>
             <executions>
@@ -84,7 +87,7 @@
         </property>
       </activation>
       <build>
-        <plugins> 
+        <plugins>
           <plugin>
             <artifactId>maven-assembly-plugin</artifactId>
             <executions>
@@ -125,20 +128,4 @@
       </build>
     </profile>
   </profiles>
-  <repositories>
-    <!-- Bootstrap repository to locate the parent pom when the parent pom 
-      has not been build locally. -->
-    <repository>
-      <id>jboss-public-repository-group</id>
-      <name>JBoss Public Repository Group</name>
-      <url>https://repository.jboss.org/nexus/content/groups/public/</url>
-      <layout>default</layout>
-      <releases>
-        <updatePolicy>never</updatePolicy>
-      </releases>
-      <snapshots>
-        <updatePolicy>daily</updatePolicy>
-      </snapshots>
-    </repository>
-  </repositories>
 </project>
