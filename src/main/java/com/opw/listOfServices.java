@@ -8,30 +8,30 @@ public class listOfServices implements java.io.Serializable {
 
 	static final long serialVersionUID = 1L;
 
-	private java.lang.String internationalDialing;
-	private java.lang.String roaming;
+	private Boolean internationalDialing;
+	private Boolean roaming;
 
 	public listOfServices() {
 	}
 
-	public java.lang.String getInternationalDialing() {
+	public java.lang.Boolean getInternationalDialing() {
 		return this.internationalDialing;
 	}
 
-	public void setInternationalDialing(java.lang.String internationalDialing) {
+	public void setInternationalDialing(java.lang.Boolean internationalDialing) {
 		this.internationalDialing = internationalDialing;
 	}
 
-	public java.lang.String getRoaming() {
+	public java.lang.Boolean getRoaming() {
 		return this.roaming;
 	}
 
-	public void setRoaming(java.lang.String roaming) {
+	public void setRoaming(java.lang.Boolean roaming) {
 		this.roaming = roaming;
 	}
 
-	public listOfServices(java.lang.String internationalDialing,
-			java.lang.String roaming) {
+	public listOfServices(java.lang.Boolean internationalDialing,
+			java.lang.Boolean roaming) {
 		this.internationalDialing = internationalDialing;
 		this.roaming = roaming;
 	}
