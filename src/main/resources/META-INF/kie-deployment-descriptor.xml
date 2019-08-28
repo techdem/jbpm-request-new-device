@@ -29,7 +29,7 @@
         </work-item-handler>
         <work-item-handler>
             <resolver>mvel</resolver>
-            <identifier>new org.jbpm.process.workitem.email.EmailWorkItemHandler("localhost", "25", "", "", true)</identifier>
+            <identifier>new org.jbpm.process.workitem.email.EmailWorkItemHandler("localhost", "2525", "", "", true)</identifier>
             <parameters/>
             <name>Email</name>
         </work-item-handler>
