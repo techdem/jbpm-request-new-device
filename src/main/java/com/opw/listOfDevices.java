@@ -16,14 +16,6 @@ public class listOfDevices implements java.io.Serializable {
 	public listOfDevices() {
 	}
 
-	public listOfDevices(java.lang.Boolean mobile, java.lang.Boolean broadband,
-			java.lang.Boolean tablet, java.lang.Boolean camera) {
-		this.mobile = mobile;
-		this.broadband = broadband;
-		this.tablet = tablet;
-		this.camera = camera;
-	}
-
 	public java.lang.Boolean getBroadband() {
 		return this.broadband;
 	}
